@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\annak\\Desktop\\VehicleMOT\\VehicleMOT\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VehicleMOT.bundle.scp.css",
+      "PackagePath": "staticwebassets\\VehicleMOT.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\annak\\Desktop\\VehicleMOT\\VehicleMOT\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\annak\\Desktop\\VehicleMOT\\VehicleMOT\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\annak\\Desktop\\VehicleMOT\\VehicleMOT\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\annak\\Desktop\\VehicleMOT\\VehicleMOT\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.VehicleMOT.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.VehicleMOT.props",
+      "PackagePath": "build\\VehicleMOT.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.VehicleMOT.props",
+      "PackagePath": "buildMultiTargeting\\VehicleMOT.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.VehicleMOT.props",
+      "PackagePath": "buildTransitive\\VehicleMOT.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

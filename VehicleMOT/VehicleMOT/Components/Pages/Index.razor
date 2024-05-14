@@ -1,0 +1,54 @@
+﻿@page "/"
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager NavigationManager
+
+<PageTitle>Vehicle MOT Information</PageTitle>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <p class="text-left"><strong>What is the vehicle's registration number?</strong></p>
+            <EditForm Model="vehicleRequest" OnValidSubmit="HandleValidSubmit" FormName="Index">
+                <DataAnnotationsValidator />
+                <ValidationSummary class="text-danger" />
+
+                <div class="mb-3">
+                    <label for="registrationNumber" class="form-label">Registration Number (number plate)</label>
+                    <InputText id="registrationNumber" @bind-Value="vehicleRequest.RegistrationNumber" @oninput="HandleInput" class="form-control" placeholder="e.g., AA123AAA" />
+                    <ValidationMessage For="@(() => vehicleRequest.RegistrationNumber)" class="text-danger" />
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Get MOT Data</button>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    public VehicleRequest vehicleRequest { get; set; } = new();
+
+    private void HandleInput(ChangeEventArgs e)
+    {
+        vehicleRequest.RegistrationNumber = e.Value?.ToString().ToUpper();
+    }
+
+
+    private void HandleValidSubmit()
+        {
+            NavigationManager.NavigateTo($"/vehicledata/{vehicleRequest.RegistrationNumber}");
+        }
+
+    public class VehicleRequest
+    {
+        [Required(ErrorMessage = "Registration number is required.")]
+        [StringLength(10, ErrorMessage = "Registration number is too long (10 characters limit).")]
+        public string RegistrationNumber { get; set; }
+    }
+
+
+
+}
+
+
+
